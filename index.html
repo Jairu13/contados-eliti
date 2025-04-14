@@ -13,7 +13,7 @@
             min-height: 100vh;
 
             background-color: blueviolet;
-            color: black;
+            color: rgb(0, 187, 93);
             display: grid;
             place-items: center;
 
@@ -21,12 +21,35 @@
 
         section {
             background: rgb(50, 0, 177);
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
         }
+
+        ::selection{
+            background: rgb(167, 132, 255);
+            padding:20px;
+            border-radius:5px;
+            text-align: center; 
+        }
+        p {
+            font-size: 100px;
+            color: black;
+        }
+
     </style>
 </head>
 
 <body>
-
+    <section>
+        <h1>COUNTER</h1>
+      <p></p>
+      <div>
+        <button> onclick="diminuir()">menos</button>
+      </div> 
+    </section>
 </body>
 
 
