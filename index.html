@@ -4,8 +4,8 @@
 <head>
     <title>COUNTER</title>
     <style>
-        {
-            margin: 0 ;
+        *{
+            margin: 0;
             box-sizing: border-box;
         }
 
@@ -28,32 +28,48 @@
             flex-direction: column;
         }
 
-        ::selection{
+        ::selection {
             background: rgb(167, 132, 255);
-            padding:20px;
-            border-radius:5px;
-            text-align: center; 
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
         }
+
         p {
             font-size: 100px;
             color: black;
         }
-
     </style>
 </head>
 
 <body>
     <section>
         <h1>COUNTER</h1>
-      <p></p>
-      <div>
-        <button> onclick="diminuir()">menos</button>
-      </div> 
+        <p id="resultado">0</p>
+        <div>
+            <button onclick="diminuir()">menos</button>
+            <button onclick="aumentar()">mais</button>
+        </div>
+
     </section>
+
+    <script>
+        let incialNumero = 0
+        function diminuir() {
+            incialNumero--
+            mostrar()
+        }
+        function aumentar() {
+            incialNumero++
+            mostrar()
+        }
+        function mostrar() {
+            const p = document.querySelector("#resultado")
+            p.innerHTML = incialNumero
+        }
+        mostrar()
+    </script>
 </body>
-
-
-
 
 
 
