@@ -4,7 +4,7 @@
 <head>
     <title>COUNTER</title>
     <style>
-        *{
+        * {
             margin: 0;
             box-sizing: border-box;
         }
@@ -13,10 +13,9 @@
             min-height: 100vh;
 
             background-color: blueviolet;
-            color: rgb(0, 187, 93);
+            color:rgb(0, 153, 120) ;
             display: grid;
             place-items: center;
-
         }
 
         section {
@@ -27,64 +26,47 @@
             align-items: center;
             flex-direction: column;
         }
-
         ::selection {
-            background: rgb(167, 132, 255);
+            background:rgb(1, 156, 123);
             padding: 20px;
             border-radius: 5px;
             text-align: center;
         }
 
-        p {
+        p{
             font-size: 100px;
-            color: black;
+            color: aqua;
         }
-    </style>
-</head>
+        </style>
+    </head>
 
-<body>
-    <section>
-        <h1>COUNTER</h1>
-        <p id="resultado">0</p>
-        <div>
-            <button onclick="diminuir()">menos</button>
-            <button onclick="aumentar()">mais</button>
-        </div>
+    <body>
+        <section>
+            <h1>COUNTER</h1>
+            <p id="resultado">0</p>
+            <div>
+                <button onclick="diminuir()">menos</button>
+                <button onclick="aumentar()">mais</button>
+            </div>
+        </section>
 
-    </section>
+        <script>
+            let inicialNumero = 0 
+            function diminuir(){
+                inicialNumero--
+                mostrar()
+            }
 
-    <script>
-        let incialNumero = 0
-        function diminuir() {
-            incialNumero--
+            function aumentar(){
+                inicialNumero++
+                mostrar()
+            }
+            function mostrar(){
+                const p = document.querySelector("#resultado")
+                p.innerHTML = inicialNumero
+            }
             mostrar()
-        }
-        function aumentar() {
-            incialNumero++
-            mostrar()
-        }
-        function mostrar() {
-            const p = document.querySelector("#resultado")
-            p.innerHTML = incialNumero
-        }
-        mostrar()
-    </script>
-</body>
+        </script>
+    </body>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</html>
+    </html>
